@@ -1,0 +1,28 @@
+<div class="row my-5 text-white">
+    <div class="col-md-4">
+        <div class="brdr w-25"></div>
+        <h2 class="py-3">Trending Movies to Watch Now</h2>
+        <div class="brdr w-100"></div>
+    </div>
+    <div *ngFor="let movie of trendingMovie" class="col-md-2 position-relative">
+        <div class="movie py-2" [routerLink]="['/movieDetails',movie.id,movie.media_type]">
+            <img [src]="_movieServices.imgPrefix+movie.poster_path" alt="movie.title" class="img-fluid">
+            <h3 class="h6">{{movie.title}}</h3>
+            <div class="vote fw-bold">{{movie.vote_average | number:'1.1-1'}}</div>
+        </div>
+    </div>
+</div>
+<div class="row my-5 text-white">
+    <div class="col-md-4">
+        <div class="brdr w-25"></div>
+        <h2 class="py-3">Trending TVs to Watch Now</h2>
+        <div class="brdr w-100"></div>
+    </div>
+    <div *ngFor="let tv of trendingTV" class="col-md-2 position-relative">
+        <div class="movie py-2" [routerLink]="['/movieDetails',tv.id,tv.media_type]">
+            <img [src]="_movieServices.imgPrefix+tv.poster_path" alt="movie.title" class="img-fluid">
+            <h3 class="h6 text-white">{{tv.name}}</h3>
+            <div class="vote fw-bold text-white">{{tv.vote_average | number:'1.1-1'}}</div>
+        </div>
+    </div>
+</div>

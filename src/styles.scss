@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;700&display=swap');
+
+$bgColor:#131722;
+$lightBgColor:#24baef;
+$bgTransparent:rgba(36,186,239,0.6);
+$fontColor:#fff;
+$borderColor:#a8a8a83d;
+$borderHeight:1px;
+$secondFontColor:#949cb0;
+
+body
+{
+    background-color: $bgColor !important;
+    color: $fontColor;
+    font-family: 'Montserrat Alternates', sans-serif !important;   
+}
+img{
+    cursor: pointer;
+}
+nav{
+    max-height: 50px;
+    a{
+        color: $fontColor !important;
+        transition: color 0.3s;
+        &:hover{
+            color: #949cb0 !important;
+        }
+    }
+    ul:first-child{   
+        .nav-item{
+            margin-right: 20px;
+        }
+    }  
+    form{
+        input{
+            &:focus{
+                border-color: white !important;
+                box-shadow: none  !important;
+            }
+        }
+    }
+    .social-media{
+        font-size: 22px;
+    }
+}
+form .submit{
+    text-align: center;
+}
+.brdr{
+    height: $borderHeight;
+    background-color: $secondFontColor;
+}
+.vote{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background-color: $lightBgColor;
+    padding: 4px 6px;
+    border-radius: 10px;
+}
